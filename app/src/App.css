@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #282c34;
+  overflow: auto;
+  height: 100vh;
+  width: 100vw;
+}
+
+.App-header {
+  color: aliceblue;
+}
+
+.noSureBetsAvailable {
+  color: red;
+}
+
+.SureBetsContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 84vw;
+  flex-wrap: wrap;
+}

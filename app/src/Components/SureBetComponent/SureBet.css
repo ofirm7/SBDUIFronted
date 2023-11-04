@@ -1,0 +1,77 @@
+.SureBetMain {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    border-radius: 1%;
+    width: 25vw;
+    height: 35vh;
+    padding: 0.3%;
+    background-color: rgb(208, 208, 184);
+    margin-right: 2%;
+    margin-top: 2%;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+.GameTitleLable {
+  overflow: auto;
+  height: 10%;
+  width: 80%;
+}
+
+.SureBetProperties {
+  background-color: aliceblue;
+  width: 93%;
+  height: 75%;
+  flex-direction: column;
+  border-radius: 2%;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.ProfitLable {
+  width: max-content;
+  height: fit-content;
+  font-weight: bold;
+  margin-left: 5%;
+  align-self: center;
+}
+
+.ChoicesContainer {
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ChoiceProperties {
+  border-style: double;
+  margin: 1%;
+  width: 29%;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-radius: 5%;
+}
+
+.NameRewardLable {
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-right: 5%;
+}
+
+.SiteLable {
+  margin-left: 5%;
+  margin-top: -5%;
+  margin-right: 5%;
+}
+
+.ChoiceInvestLable {
+  margin-left: 5%;
+  margin-top: -5%;
+  margin-right: 5%;
+}
