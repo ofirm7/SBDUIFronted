@@ -18,7 +18,7 @@ const SureBet = (args) => {
                             {choice._name} : {choice._reward}
                         </p>
                         <p className="SiteLable">
-                            Site: {choice._SureChoice__site}
+                            Site: <a href={choice._SureChoice__link}>{choice._SureChoice__site}</a>
                         </p>
                         <p className="ChoiceInvestLable">
                             Invest: {(choice._SureChoice__invest / 1000 * 100).toFixed(3)}{profitMeasurements}

@@ -11,7 +11,7 @@ import axios from 'axios';
 //End of imports
 
 //Consts
-const FASTAPI_ADDRESS = "http://192.168.1.39:8000/SureBets"
+const FASTAPI_ADDRESS = "http://172.232.217.160:8000/SureBets/"
 const teamsSeparator = 'vs'
 const gameTitleCharsReplacements = {
   _X_:'',
@@ -22,6 +22,7 @@ const gameTitleCharsReplacements = {
 }
 const charsToReplace = ['_X_', 'X_', '_X', 'X', '_']
 const profitPrecision = 3
+const fetchInterval = 5000 //1000 -> 1 Second
 //End of consts
 
 //Functions
@@ -38,10 +39,30 @@ const ConvertGameTitle = (gameTitle) => {
 function App() {
   const [sureBets, setSureBets] = useState()
 
-  useEffect (() => {
+  const fetchData = () => {
     axios.get(FASTAPI_ADDRESS)
       .then(response => setSureBets(response.data))
+      .catch(error => {
+        console.error(error);
+      });
+  };
+
+  useEffect(() => {
+    fetchData(); // Fetch data on component mount
+
+    const interval = setInterval(() => {
+      fetchData();
+    }, fetchInterval);
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
+
+  // useEffect (() => {
+  //   axios.get(FASTAPI_ADDRESS)
+  //     .then(response => setSureBets(response.data)).catch(
+  //       error => {console.error(error)}
+  //     )
+  // }, []);
   
   return (
     <div className="App">
